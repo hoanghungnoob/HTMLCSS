@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Web App</title>
+</head>
+<body>
+    <h1>Welcome to Our Restaurant</h1>
+    <div class="menu-tiles">
+        <a href="javascript:void(0);" onclick="redirectToRandomCategory()">Menu</a>
+        <a href="javascript:void(0);" onclick="redirectToRandomCategory()">Specials</a>
+        <a href="javascript:void(0);" onclick="redirectToMap()">Map</a>
+    </div>
+
+    <script>
+        function redirectToRandomCategory() {
+            // Array of available menu categories
+            const categories = ["Lunch", "Dinner", "Sushi", "Appetizers", "Desserts"];
+            
+            // Generate a random index
+            const randomIndex = Math.floor(Math.random() * categories.length);
+            
+            // Get the random category
+            const randomCategory = categories[randomIndex];
+            
+            // Redirect to the random category page
+            window.location.href = `/menu/${randomCategory}.html`; // Update the URL structure accordingly
+        }
+
+        function redirectToMap() {
+            // Redirect to the Map page
+            window.location.href = "/map.html"; // Update the URL accordingly
+        }
+    </script>
+</body>
+</html>
